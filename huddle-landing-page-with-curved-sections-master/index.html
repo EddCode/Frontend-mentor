@@ -7,49 +7,50 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
 
   <title>Frontend Mentor | Huddle landing page with curved sections</title>
 
 </head>
 <body>
-  <header class="hero">
-    <nav class="hero__nav">
-      <div class="hero__logo">
-        <figure class="hero_logo__img">
-          <img src="images/logo.svg" alt="logo huddle" srcset="huddle">
-        </figure>
-      </div>
-      <button>Try It Free</button>
-    </nav>
-    <div class="hero__banner">
+  <nav class="container-fluid nav">
+    <figure class="hero_logo__img figure">
+      <img src="./images/logo.svg" class="img-fluid" alt="logo huddle" srcset="huddle">
+    </figure>
+    <button class="btn btn--outline">Try It Free</button>
+  </nav>
+  <header class="hero container">
+   <div class="hero__banner">
       <h1>Build The Community Your Fans Will Love</h1>
       <div class="hero__banner__description">
         <p>hello</p>
       </div>
-      <button type="button">Get Started For Free </button>
+      <button type="button" class="btn btn--contained">Get Started For Free </button>
     </div>
-    <figure class="hero__banner">
-      <img src="images/screen-mockups.svg" alt="screen muckups" srcset="screen">
+    <figure class="hero__banner figure">
+      <img src="images/screen-mockups.svg" class="img-fluid" alt="screen muckups" srcset="screen">
     </figure>
     <div class="community_message">
       <div class="comunity">
-        <figure>
-          <img src="images/icon-communities.svg" alt="icon communities" srcset="">
+        <figure class="figure">
+          <img src="images/icon-communities.svg" class="img-fluid" alt="icon communities" srcset="">
         </figure>
         <h2>1.4k+</h2>
         <p>Communities Formed</p>
       </div>
       <div class="messages">
-        <figure>
-          <img src="images/icon-messages.svg" alt="icon messages" srcset="">
+        <figure class="figure">
+          <img src="images/icon-messages.svg" class="img-fluid"  alt="icon messages" srcset="">
         </figure>
         <h2>2.7m+</h2>
         <p>Messages Sent</p>
       </div>
     </div>
   </header>
-  <section class="grow-together">
-    <figure class="section_ilustration"><img src="images/illustration-grow-together.svg" alt=""></figure>
+  <section class="grow-together container">
+    <figure class="section_ilustration figure">
+      <img src="images/illustration-grow-together.svg" class="img-fluid"  alt="">
+    </figure>
     <div class="section_desc">
       <h3 class="section__title">Grow Together</h3>
       <p class="section__copy">
@@ -58,9 +59,9 @@
       </p>
     </div>
   </section>
-  <section class="following-conversations">
-    <figure class="section__ilustration">
-      <img src="images/illustration-flowing-conversation.svg" alt="" srcset="">
+  <section class="following-conversations container">
+    <figure class="section__ilustration figure">
+      <img src="images/illustration-flowing-conversation.svg" class="img-fluid"  alt="" srcset="">
     </figure>
     <div class="section__desc">
       <h3 class="section__title">Following Conversations</h3>
@@ -70,9 +71,9 @@
       </p>
     </div>
   </section>
-  <section class="users">
-    <figure class="section__ilustration">
-      <img src="images/illustration-your-users.svg" alt="" srcset="">
+  <section class="users container">
+    <figure class="section__ilustration figure">
+      <img src="images/illustration-your-users.svg" class="img-fluid" alt="" srcset="">
     </figure>
     <div class="section__desc">
       <h3 class="section__title">Your Users</h3>
@@ -83,13 +84,13 @@
       </p>
     </div>
   </section>
-  <section class="join-community">
+  <section class="join-community container">
    <div class="section__desc">
       <h3 class="section__title">Ready To Build Your Community?</h3>
-      <button class="btn btn--primary">Get Started For Free</button>
+      <button class="btn btn--contained">Get Started For Free</button>
    </div>
   </section>
-  <footer class="footer">
+  <footer class="footer container">
     <div class="subscribe">
       <p class="subscribe__newsletter">NEWLETTER</p>
       <p class="subscribe__copy">
@@ -98,11 +99,11 @@
       </p>
       <form class="newsletter__form">
         <input type="text">
-        <button type="submit btn">Subscribe</button>
+        <button type="submit" class=" btn btn--contained btn--rounded">Subscribe</button>
       </form>
     </div>
     <div class="huddle">
-      <img src="images/icon-messages.svg" alt="" srcset="">
+      <img src="images/icon-messages.svg" class="img-fluid" alt="" srcset="">
       <p>Huddle</p>
       <p class="huddle__copy">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet non 

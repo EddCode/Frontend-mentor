@@ -2,4 +2,70 @@
   --primary: hsl(322, 100%, 66%);
   --neutral-cyan: hsl(192, 100%, 9%);
   --neutral-blue: hsl(207, 100%, 98%);
+
+  /** === Typography ===*/
+  --heading: 700 'Poppins';
+  --body1: 400 'Open Sans';
+  --body2: 600 'open Sans';
+  --body3: 700 'Open Sans';
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+.container{
+  margin: auto;
+  width: 80%;
+  max-width: 1170px;
+}
+
+.container-fluid{
+  margin: auto;
+  padding: .5rem 1rem;
+}
+
+
+.btn{
+  border-radius: 35px;
+  padding: .5rem 2rem;
+  outline: none;
+  border: none;
+}
+
+.btn.btn--outline{
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  background-color: transparent;
+}
+
+.btn.btn--contained{
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn.btn--rounded{
+  border-radius: 7px;
+}
+
+.figure{
+  display: inline-block;
+}
+
+.figure-img {
+  margin-bottom: .5rem;
+  line-height: 1;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
 }
