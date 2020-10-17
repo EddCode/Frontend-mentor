@@ -4,10 +4,10 @@
   --neutral-blue: hsl(207, 100%, 98%);
 
   /** === Typography ===*/
-  --heading: 700 'Poppins';
-  --body1: 400 'Open Sans';
-  --body2: 600 'open Sans';
-  --body3: 700 'Open Sans';
+  --heading: 700 larger 'Poppins';
+  --body1: 400 smaller 'Open Sans';
+  --body2: 600 smaller 'open Sans';
+  --body3: 700 smaller 'Open Sans';
 }
 
 *{
@@ -19,12 +19,14 @@
 .container{
   margin: auto;
   width: 80%;
-  max-width: 1170px;
+  max-width: 1440px;
 }
 
 .container-fluid{
-  margin: auto;
-  padding: .5rem 1rem;
+  margin:0  auto;
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 
@@ -65,7 +67,122 @@
   height: auto;
 }
 
+.container.description{
+  margin: 2em auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.container.description.reverse{
+  flex-direction: row;
+}
+
+.section_ilustration{
+  width: 30%;
+}
+
+.section_desc{
+  width: 50%;
+}
+
+.section__title{
+  font: var(--heading);
+  font-size: larger;
+  margin-bottom: 1.5rem;
+}
+
+.section__copy{
+  font: var(--body1);
+  width: 30em;
+}
+
+/**
+ * =============
+ * Header
+ * =============
+ * */
 .nav{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
+
+.hero{
+  display: flex;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  padding: 3em 0;
+}
+
+.hero__banner{
+  margin: 2em;
+}
+
+.hero__banner h1 {
+  font: var(--heading);
+}
+
+.hero__banner-figure{
+  margin: 2em 0;
+}
+
+.hero__banner__description{
+  width: 430px;
+  margin: 1em auto;
+}
+
+.hero__banner__description{
+  margin: 1em;
+}
+
+.community_message{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.grow-together{
+  background-image: url(../images/bg-section-top-desktop-1.svg), url(../images/bg-section-bottom-desktop-1.svg);
+  background-size: 100% contain;
+  background-repeat: no-repeat,  no-repeat;
+  background-position-y: top, bottom;
+  padding: 1rem 0;
+}
+
+.following-conversations{
+  display: flex;
+  margin: 2em auto;
+  align-items: center;
+}
+
+.users{
+  background-image: url(../images/bg-section-top-desktop-1.svg), url(../images/bg-section-bottom-desktop-1.svg);
+  background-size: 100% cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position-y: top, bottom;
+  padding: 1rem 0;
+}
+
+.join-community{
+  padding: 1rem;
+  text-align: center;
+}
+
+
+/*
+ * ==========
+ * Footer
+ * ==========
+ * **/
+  .footer{
+    background-image: url(../images/bg-footer-top-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--neutral-blue);
+  }
