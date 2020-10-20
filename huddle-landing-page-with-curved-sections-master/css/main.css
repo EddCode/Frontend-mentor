@@ -2,6 +2,8 @@
   --primary: hsl(322, 100%, 66%);
   --neutral-cyan: hsl(192, 100%, 9%);
   --neutral-blue: hsl(207, 100%, 98%);
+  --backgound: hsl(207, 100%, 98%);
+  --bg-footer: hsl(192, 96%, 9%);
 
   /** === Typography ===*/
   --heading: 700 larger 'Poppins';
@@ -147,12 +149,28 @@
   justify-content: space-around;
 }
 
+.grow-together::before{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 8em;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-image: url(../images/bg-section-top-desktop-1.svg);
+}
+
+.grow-together::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 8em;
+  background-color: #fff;
+  background-image: url(../images/bg-section-bottom-desktop-1.svg);
+  background-repeat: no-repeat;
+}
+
 .grow-together{
-  background-image: url(../images/bg-section-top-desktop-1.svg), url(../images/bg-section-bottom-desktop-1.svg);
-  background-size: 100% contain;
-  background-repeat: no-repeat,  no-repeat;
-  background-position-y: top, bottom;
-  padding: 1rem 0;
+  background-color: var(--backgound);
 }
 
 .following-conversations{
@@ -161,16 +179,31 @@
   align-items: center;
 }
 
+.users:before{
+  content: '';
+  display: block;
+  height: 8em;
+  background-color: #fff;
+  background-image: url(../images/bg-section-top-desktop-1.svg);
+  background-repeat: no-repeat;
+}
+
+.users:after{
+  content: '';
+  display: block;
+  height: 9em;
+  background-color: #fff;
+  background-image: url(../images/bg-section-bottom-desktop-2.svg);
+  background-repeat: no-repeat;
+}
+
 .users{
-  background-image: url(../images/bg-section-top-desktop-1.svg), url(../images/bg-section-bottom-desktop-1.svg);
-  background-size: 100% cover;
-  background-repeat: no-repeat, no-repeat;
-  background-position-y: top, bottom;
-  padding: 1rem 0;
+  background-color: var(--backgound);
 }
 
 .join-community{
   padding: 1rem;
+  margin: 2em auto;
   text-align: center;
 }
 
@@ -180,9 +213,16 @@
  * Footer
  * ==========
  * **/
-  .footer{
-    background-image: url(../images/bg-footer-top-desktop.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: var(--neutral-blue);
-  }
+.footer::before{
+  content: '';
+  display: block;
+  height: 9.5em;
+  background-color: #fff;
+  background-image: url(../images/bg-footer-top-desktop.svg);
+  background-repeat: no-repeat;
+}
+
+.footer{
+  background-color: var(--bg-footer);
+  color: var(--neutral-blue);
+}
