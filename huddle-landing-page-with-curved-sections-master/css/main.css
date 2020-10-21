@@ -225,4 +225,30 @@
 .footer{
   background-color: var(--bg-footer);
   color: var(--neutral-blue);
+  box-sizing: border-box;
+  padding-bottom: 2em;
+  position: relative;
+  font-size: var(--body2)
+}
+
+.footer .container{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin-top:2em;
+}
+
+
+.subscribe, .huddle{
+  width: 40%;
+}
+
+.huddle__title{
+  font: var(--heading);
+  font-size: 32px;
+}
+
+.huddle__copy{
+  margin: 1em 0;
 }
