@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
 :root{
   /* <-- sizes  -->*/
   --media-mobile: 375px;
@@ -29,8 +31,8 @@ body{
 .main__container::after{
   content: '';
   position: absolute;
-  height: 50vh;
-  width: 50%;
+  height: 40%;
+  width: 60%;
   top: 0;
   left: 0;
   background-image: url(images/bg-pattern-top.svg);
@@ -72,7 +74,55 @@ body{
   display: block;
   margin: 0 auto;
   position: relative;
-  top: -50px;
+  top: 50px;
   border-radius: 100%;
-  
+}
+
+.card__content{
+  margin-top: 60px;
+}
+
+.card__details{
+  text-align: center;
+}
+
+.name{
+  display: inline-block;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin: 1em 0 5px 0;
+}
+
+.years, .location{
+  font-weight: 300;
+  color: var(--neutral)
+}
+.location{
+  margin: 0 0 2rem 0;
+}
+
+.divider{
+  color: var(--neutral);
+  margin: 2rem 0;
+}
+
+.metrics{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.followers, .likes, .photos{
+  text-align: center;
+}
+
+.followers p, .likes p, .photos p {
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  color: var(--dark-blue);
+}
+
+.followers span, .likes span, .photos span {
+  color: var(--neutral);
+  font-weight: 400;
+  font-size: .8em;
 }
