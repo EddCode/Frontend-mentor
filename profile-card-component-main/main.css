@@ -1,0 +1,12 @@
+:root{
+  /* <-- sizes  -->*/
+  --media-mobile: 375px;
+  --media-desktop: 1440px;
+  /* <-- colors -->*/
+  --primary: hsl(185, 75%, 39%);
+  --dark-blue: hsl(229, 38%, 23%);
+  --dark-gray: hsl(229, 10%, 46%);
+  --neutral: hsl(0,0%,59%);
+  /* <-- typography -->*/
+  --body: 'Kumbh Sans' 18px;
+}
