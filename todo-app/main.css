@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root{
+  --color-primary: hsl(220, 98%, 61%);
+  --color-background: linear-gradient(to left, hsl(192, 100%, 67%), hsl(280, 87%, 65%) );
+
+  /* Light theme */
+  --gray: hsl(0, 0%, 98%);
+  --grayish: hsl(236, 33%, 92%);
+  --gray-blue: hsl(233, 11%, 84%);
+  --dark-gray: hsl(236, 9%, 61%);
+  --darken-gray: hsl(235, 19%, 35%);
+  
+  /* Dark theme */
+  --dark-blue: hsl(235, 21%, 11%);
+  --desaturated: hsl(235, 24%, 19%);
+  --light-blue: hsl(234, 39%, 85%);
+  --light-blue-secondary: hsl(236, 33%, 92%);
+  --grayish-blue: hsl(234, 11%, 52%);
+  --darken-blue: hsl(233, 14%, 35%);
+  --darken-blue-secondary: hsl(233, 14%, 26%);
+
+  --mobile-size: 375px;
+  --desktop-size: 1440px;
+
+  --font-size: 18px;
+  --font-family: 'Josefin Sans';
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  background-color: var(--gray)
+}
+
+.hero {
+  min-height: 40vh;
+  max-height: 40vh;
+  background-image: url(./images/bg-desktop-light.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 40%;
+  margin: auto;
+  position: relative;
+  top: -30vh;
+}
+
+.container-footer{
+  display: inherit;
+  text-align: center;
+  margin-top: 4em;
+  color: var(--dark-gray);
+}
+
+.title {
+  letter-spacing: 1rem;
+  color: #fff;
+  position: relative;
+}
+
+.icon-theme{
+  background-image: url(./images/icon-moon.svg);
+  background-size: cover;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: 0;
+}
+
+.icon-theme.dark{
+  background-image: url(./images/icon-sun.svg);
+}
+
+.add-todo{
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  width: 100%;
+  margin: 1em 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
+.card-list{
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 12px; 
+  box-shadow: 0 2px 2rem -8px rgba(0,0,0,.5);
+}
+
+.todo-item, .add-todo{
+  position: relative;
+  list-style: none;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+  color: var(--darken-gray);
+  border-bottom: 1px solid var(--grayish);
+}
+
+.todo-item:hover{
+  cursor: pointer;
+}
+
+.todo-item:hover::after {
+  content: '';
+  position: absolute;
+  right: 2rem;
+  height: 1rem;
+  width: 1rem;
+  background-image: url(./images/icon-cross.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.actions-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 .8rem;
+  user-select: none;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-evenly;
+  flex-basis: 200px;
+}
+
+.items-left {
+  color: var(--gray-blue)
+}
+
+.actions > .all, .actions > .active, .actions > .completed, .actions > .clear {
+  cursor: pointer;
+  color: var(--dark-gray);
+}
+
+.all:hover, .active:hover, .completed:hover, .clear:hover {
+  color: var(--darken-gray)
+}

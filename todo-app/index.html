@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body>
+  <header class="hero"></header>
+  <main class="container">
+      <h1 class="title">
+        TODO
+        <span class="icon-theme"></span>
+      </h1>
+      <input type="text" class="add-todo" placeholder="Create a new todo..." >
+        <ul class="card-list">
+          <li class="todo-item completed">
+            <i class="gradient-box"></i>
+            Complete javascript course
+          </li>
+          <li class="todo-item">
+            <i class="gradient-box"></i>
+            10 minutes meditation
+          </li>
+          <div class="actions-container">
+            <p class="items-left">1 item left</p>
+            <div class="actions">
+              <p class="all focus" >All</p>
+              <p class="active" >Active</p>
+              <p class="completed" >Completed</p>
+            </div>
+            <p class="clear">Clear completed</p>
+          </div>
+        </ul>
+        <span class="container-footer" >Drag and drop to reorder list</span>
+  </main>
+</body>
+</html>
