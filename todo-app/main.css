@@ -84,6 +84,11 @@ body {
   margin: 1em 0;
   font-family: var(--font-family);
   font-size: var(--font-size);
+  caret-color: var(--grayish-blue);
+}
+
+.add-todo::placeholder{
+  color: var(--gray-blue)
 }
 
 .card-list{
