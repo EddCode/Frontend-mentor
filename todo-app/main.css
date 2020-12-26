@@ -108,11 +108,20 @@ body {
   border-bottom: 1px solid var(--grayish);
 }
 
+.todo-item.no-task{
+  text-align: center;;
+}
+
+.todo-item.finished{
+  text-decoration: line-through;
+  color: var(--gray-blue)
+}
+
 .todo-item:hover{
   cursor: pointer;
 }
 
-.todo-item:hover::after {
+.todo-item:hover:not(.no-task)::after {
   content: '';
   position: absolute;
   right: 2rem;
@@ -140,9 +149,17 @@ body {
   color: var(--gray-blue)
 }
 
-.actions > .all, .actions > .active, .actions > .completed, .actions > .clear {
+.actions > .all, .actions > .active, .actions > .completed, .clear {
   cursor: pointer;
   color: var(--dark-gray);
+}
+
+.actions > .focus {
+  color: var(--color-primary)
+}
+
+.clear {
+  color: var(--darken-gray);
 }
 
 .all:hover, .active:hover, .completed:hover, .clear:hover {

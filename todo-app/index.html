@@ -16,16 +16,9 @@
         TODO
         <span class="icon-theme"></span>
       </h1>
-      <input type="text" class="add-todo" placeholder="Create a new todo..." >
-        <ul class="card-list">
-          <li class="todo-item completed">
-            <i class="gradient-box"></i>
-            Complete javascript course
-          </li>
-          <li class="todo-item">
-            <i class="gradient-box"></i>
-            10 minutes meditation
-          </li>
+      <input type="text" id="createTask" class="add-todo" placeholder="Create a new todo..." >
+        <ul class="card-list" >
+          <div id="todoList"></div>
           <div class="actions-container">
             <p class="items-left">1 item left</p>
             <div class="actions">
@@ -38,5 +31,6 @@
         </ul>
         <span class="container-footer" >Drag and drop to reorder list</span>
   </main>
+  <script src="./index.js"></script>
 </body>
 </html>
