@@ -142,6 +142,7 @@ body {
 .actions {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   flex-basis: 200px;
 }
 
@@ -149,12 +150,16 @@ body {
   color: var(--gray-blue)
 }
 
-.actions > .all, .actions > .active, .actions > .completed, .clear {
+.actions input[name='action'] {
+  visibility: hidden;;
+}
+
+.actions input[name='action'] + label {
   cursor: pointer;
   color: var(--dark-gray);
 }
 
-.actions > .focus {
+.actions > input[name="action"]:checked + label {
   color: var(--color-primary)
 }
 
