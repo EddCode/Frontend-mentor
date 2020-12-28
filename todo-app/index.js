@@ -1,5 +1,4 @@
 const tasksStorage = JSON.parse(localStorage.getItem("todolist"));
-console.log(tasksStorage);
 let state = tasksStorage;
 
 const $todoList = document.getElementById("todoList");
@@ -88,8 +87,6 @@ const clearCompletedTasks = (evt) => {
   state = state.filter((task) => !task.completed);
   renderTasks(state)($todoList);
 };
-
-console.log($clear);
 
 $actions.forEach((element) => element.addEventListener("click", completeTask));
 $createTaskInput.addEventListener("keyup", listener);
