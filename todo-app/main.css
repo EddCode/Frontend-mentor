@@ -150,8 +150,13 @@ body {
   color: var(--gray-blue)
 }
 
+input[type='checkbox']:checked + label {
+  text-decoration: line-through;
+  color: var(--grayish)
+}
+
 .actions input[name='action'] {
-  visibility: hidden;;
+  visibility: hidden;
 }
 
 .actions input[name='action'] + label {
@@ -164,6 +169,7 @@ body {
 }
 
 .clear {
+  cursor: pointer;
   color: var(--darken-gray);
 }
 

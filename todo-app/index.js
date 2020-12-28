@@ -1,8 +1,12 @@
-let state = [];
+const tasksStorage = JSON.parse(localStorage.getItem("todolist"));
+console.log(tasksStorage);
+let state = tasksStorage;
 
 const $todoList = document.getElementById("todoList");
 const $createTaskInput = document.getElementById("createTask");
 const $actions = document.querySelectorAll('input[type="radio"]');
+const $clear = document.querySelector(".clear");
+const $itemsLeft = document.querySelector(".items-left");
 
 const addTask = (task) => state.push({ ...task });
 
@@ -21,6 +25,10 @@ const renderTasks = (todolist = []) => {
     return acc;
   };
 
+  $itemsLeft.innerHTML = `${todolist.length} ${
+    todolist.length == 1 ? "item" : "items"
+  } left`;
+
   const renderTask =
     todolist.length > 0
       ? todolist.reduce(reduce, "")
@@ -30,6 +38,7 @@ const renderTasks = (todolist = []) => {
 
   return (el) => {
     el.innerHTML = renderTask;
+    localStorage.setItem("todolist", JSON.stringify(state));
     for (let taskElement of el.children) {
       const input = taskElement.children[0];
       if (input) {
@@ -55,9 +64,7 @@ const listener = (e) => {
   }
 };
 
-if (state.length == 0) {
-  renderTasks()($todoList);
-}
+state.length == 0 ? renderTasks()($todoList) : renderTasks(state)($todoList);
 
 const completeTask = (evt) => {
   const action = evt.target.getAttribute("id");
@@ -77,5 +84,13 @@ const completeTask = (evt) => {
   renderTasks(taskWillBeRender)($todoList);
 };
 
+const clearCompletedTasks = (evt) => {
+  state = state.filter((task) => !task.completed);
+  renderTasks(state)($todoList);
+};
+
+console.log($clear);
+
 $actions.forEach((element) => element.addEventListener("click", completeTask));
 $createTaskInput.addEventListener("keyup", listener);
+$clear.addEventListener("click", clearCompletedTasks);
