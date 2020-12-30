@@ -10,7 +10,7 @@
   --gray-blue: hsl(233, 11%, 84%);
   --dark-gray: hsl(236, 9%, 61%);
   --darken-gray: hsl(235, 19%, 35%);
-  
+
   /* Dark theme */
   --dark-blue: hsl(235, 21%, 11%);
   --desaturated: hsl(235, 24%, 19%);
@@ -35,6 +35,11 @@ body {
   background-color: var(--gray)
 }
 
+/**
+ * =========
+ *  HERO
+ * =========
+ * */
 .hero {
   min-height: 40vh;
   max-height: 40vh;
@@ -43,21 +48,27 @@ body {
   background-repeat: no-repeat;
 }
 
-.container {
+/**
+ * ================
+ *  Card TODO LIST
+ * ================
+ * */
+.todolist__container-card {
   width: 40%;
   margin: auto;
   position: relative;
   top: -30vh;
 }
 
-.container-footer{
+.todolist__container-footer{
   display: inherit;
   text-align: center;
   margin-top: 4em;
   color: var(--dark-gray);
 }
 
-.title {
+/* <-- todo list header  --> */
+.todolist__title {
   letter-spacing: 1rem;
   color: #fff;
   position: relative;
@@ -70,12 +81,25 @@ body {
   height: 2rem;
   position: absolute;
   right: 0;
+  cursor: pointer;
 }
 
 .icon-theme.dark{
   background-image: url(./images/icon-sun.svg);
+  background-color: transparent;
 }
 
+/* <-- todo list   -->*/
+.todolist__content{
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 2rem -8px rgba(0,0,0,.5);
+}
+
+
+/* <-- create todo item  --> */
 .add-todo{
   outline: none;
   border: none;
@@ -91,13 +115,7 @@ body {
   color: var(--gray-blue)
 }
 
-.card-list{
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-  border-radius: 12px; 
-  box-shadow: 0 2px 2rem -8px rgba(0,0,0,.5);
-}
+/* <-- todo tasks list  --> */
 
 .todo-item, .add-todo{
   position: relative;
@@ -132,6 +150,14 @@ body {
   background-size: contain;
 }
 
+input[type='checkbox']:checked + label {
+  text-decoration: line-through;
+  color: var(--grayish);
+  cursor: pointer;
+}
+
+/* <-- todo`s actions --> */
+
 .actions-container{
   display: flex;
   justify-content: space-between;
@@ -139,7 +165,7 @@ body {
   user-select: none;
 }
 
-.actions {
+.todolist__actions {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -150,21 +176,17 @@ body {
   color: var(--gray-blue)
 }
 
-input[type='checkbox']:checked + label {
-  text-decoration: line-through;
-  color: var(--grayish)
-}
-
-.actions input[name='action'] {
+.todolist__actions input[name='action'] {
   visibility: hidden;
+  border: none;
 }
 
-.actions input[name='action'] + label {
+.todolist__actions input[name='action'] + label {
   cursor: pointer;
   color: var(--dark-gray);
 }
 
-.actions > input[name="action"]:checked + label {
+.todolist__actions > input[name="action"]:checked + label {
   color: var(--color-primary)
 }
 
@@ -175,4 +197,35 @@ input[type='checkbox']:checked + label {
 
 .all:hover, .active:hover, .completed:hover, .clear:hover {
   color: var(--darken-gray)
+}
+
+/**
+ * ===========
+ *  Dark Hero
+ * ===========
+ * */
+.dark {
+    background-color: var(--desaturated);
+}
+
+.dark .hero {
+  background-image: url(./images/bg-desktop-dark.jpg);
+}
+
+
+.dark .add-todo {
+    background-color: var(--darken-blue-secondary);
+    border: none;
+}
+
+.dark .todolist__content{
+    background-color: var(--darken-blue-secondary);
+}
+
+.dark .todo-item label {
+    color: var(--grayish-blue);
+}
+
+.dark .clear {
+    color: var(--gray)
 }

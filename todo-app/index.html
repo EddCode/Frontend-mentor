@@ -4,24 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="stylesheet" href="normilize.css">
   <link rel="stylesheet" href="main.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Todo app</title>
 </head>
 <body>
   <header class="hero"></header>
-  <main class="container">
-      <h1 class="title">
+  <main class="todolist__container-card">
+      <h1 class="todolist__title">
         TODO
-        <span class="icon-theme"></span>
+        <span id="changeTheme" class="icon-theme"></span>
       </h1>
       <input type="text" id="createTask" class="add-todo" placeholder="Create a new todo..." >
-        <ul class="card-list" >
+        <ul class="todolist__content" >
           <div id="todoList"></div>
           <div class="actions-container">
             <p class="items-left"></p>
-            <div class="actions">
+            <div class="todolist__actions">
               <input type="radio" name="action" id="all" checked>
               <label for="all">All</label>
               <input type="radio" name="action" id="active">
@@ -32,7 +33,7 @@
             <p class="clear">Clear completed</p>
           </div>
         </ul>
-        <span class="container-footer" >Drag and drop to reorder list</span>
+        <span class="todolist__container-footer" >Drag and drop to reorder list</span>
   </main>
   <script src="./index.js"></script>
 </body>

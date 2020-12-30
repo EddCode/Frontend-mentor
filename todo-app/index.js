@@ -1,19 +1,22 @@
 const tasksStorage = JSON.parse(localStorage.getItem("todolist"));
-let state = tasksStorage;
+let state = tasksStorage || [];
 
 const $todoList = document.getElementById("todoList");
 const $createTaskInput = document.getElementById("createTask");
 const $actions = document.querySelectorAll('input[type="radio"]');
 const $clear = document.querySelector(".clear");
 const $itemsLeft = document.querySelector(".items-left");
+const $changeTheme = document.getElementById("changeTheme");
 
 const addTask = (task) => state.push({ ...task });
 
 // Render lists
 const renderTasks = (todolist = []) => {
   const reduce = (acc, next) => {
-    acc += `<li class="todo-item" data-taskid="${next.id}">
-              <input type="checkbox" id="task_${next.id}" 
+    acc += `<li class="todo-item draggable" draggable="true" data-taskid="${
+      next.id
+    }">
+              <input type="checkbox" id="task_${next.id}"
                       name=${next.task.replaceAll(" ", "_")}
                       ${next.completed && "checked"}
               />
@@ -83,6 +86,12 @@ const completeTask = (evt) => {
   renderTasks(taskWillBeRender)($todoList);
 };
 
+const changeTheme = (evt) => {
+  const $body = document.getElementsByTagName("body");
+  $body[0].classList.toggle("dark");
+  evt.target.classList.toggle("dark");
+};
+
 const clearCompletedTasks = (evt) => {
   state = state.filter((task) => !task.completed);
   renderTasks(state)($todoList);
@@ -91,3 +100,4 @@ const clearCompletedTasks = (evt) => {
 $actions.forEach((element) => element.addEventListener("click", completeTask));
 $createTaskInput.addEventListener("keyup", listener);
 $clear.addEventListener("click", clearCompletedTasks);
+$changeTheme.addEventListener("click", changeTheme);
