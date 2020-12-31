@@ -211,6 +211,10 @@ input[type='checkbox']:checked + label {
   background-image: url(./images/bg-desktop-dark.jpg);
 }
 
+.dark .icon-theme {
+    background-image: url(./images/icon-sun.svg);
+}
+
 
 .dark .add-todo {
     background-color: var(--darken-blue-secondary);

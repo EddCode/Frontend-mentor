@@ -112,6 +112,23 @@ const clearCompletedTasks = (evt) => {
   renderTasks(state)($todoList);
 };
 
+const setColorSchema = (evt) => {
+  evt.matches
+    ? document.querySelector("body").classList.add("dark")
+    : document.querySelector("body").classList.remove("dark");
+};
+
+const initColorSchema = () => {
+  const userPrefersDark =
+    window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
+  const colorSchema = window.matchMedia("(prefers-color-scheme: dark)");
+
+  setColorSchema(userPrefersDark);
+  colorSchema.addListener(setColorSchema);
+};
+
+initColorSchema();
+
 $actions.forEach((element) => element.addEventListener("click", completeTask));
 $createTaskInput.addEventListener("keyup", listener);
 $clear.addEventListener("click", clearCompletedTasks);
