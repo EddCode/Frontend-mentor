@@ -127,7 +127,7 @@ body {
 }
 
 .todo-item.no-task{
-  text-align: center;;
+  text-align: center;
 }
 
 .todo-item.finished{
@@ -139,8 +139,7 @@ body {
   cursor: pointer;
 }
 
-.todo-item:hover:not(.no-task)::after {
-  content: '';
+.todo-item:hover:not(.no-task) .remove-item {
   position: absolute;
   right: 2rem;
   height: 1rem;
@@ -228,4 +227,12 @@ input[type='checkbox']:checked + label {
 
 .dark .clear {
     color: var(--gray)
+}
+
+.dark .todo-item:hover:not(.no-task)::after {
+  background-image: url(./images/icon-cross.svg);
+}
+
+.dark input[type='checkbox']:checked + label {
+  color: var(--dark-gray);
 }

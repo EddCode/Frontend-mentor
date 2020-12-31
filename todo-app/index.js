@@ -23,6 +23,9 @@ const renderTasks = (todolist = []) => {
               <label for="task_${next.id}">
                 ${next.task}
               </label>
+              <span class="remove-item" data-task="${next.id}"id="remove_${
+      next.id
+    }"></span>
             </li>`;
     return acc;
   };
@@ -38,9 +41,21 @@ const renderTasks = (todolist = []) => {
           There's no tasks yet.
       </li>`;
 
+  const remove = (evt) => {
+    const id = evt.target.getAttribute("data-task");
+    state = state.filter((task) => task.id != id);
+
+    renderTasks(state)($todoList);
+  };
+
   return (el) => {
     el.innerHTML = renderTask;
     localStorage.setItem("todolist", JSON.stringify(state));
+
+    document
+      .querySelectorAll(".remove-item")
+      .forEach((el) => el.addEventListener("click", remove));
+
     for (let taskElement of el.children) {
       const input = taskElement.children[0];
       if (input) {
