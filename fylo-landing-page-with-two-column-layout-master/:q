@@ -1,0 +1,14 @@
+root{
+  /* <--- colors --->*/
+  /* <-- primary    -->*/
+  /* <-- acent      -->*/
+  /* <-- Neutral    -->*/
+  /* <-- Typography -->*/
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+

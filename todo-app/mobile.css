@@ -186,7 +186,7 @@ input[type='checkbox']:checked + label {
   color: var(--dark-gray);
 }
 
-.todolist__actions  input[name="action"]:checked + label {
+.todolist__actions > input[name="action"]:checked + label {
   color: var(--color-primary)
 }
 
