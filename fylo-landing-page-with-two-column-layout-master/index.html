@@ -4,24 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap" rel="stylesheet">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
 
   <title>Frontend Mentor | Fylo landing page with two column layout</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <nav class="menu">
-    <figure>
-      <img src="images/logo.svg" alt="" class="logo">
+    <figure class="menu-logo">
+      <img src="images/logo.svg" alt="" class="img-fluid">
     </figure>
-    <ul class="menu-items">
+    <ul class="menu-items font-navigation">
       <li>Features</li>
       <li>Terms</li>
       <li>Sign in</li>
@@ -29,8 +25,8 @@
   </nav>
   <header class="hero">
     <div class="hero__container">
-      <h1 class="title">All your files in one secure location, accessible anywhere</h1>
-      <p class="hero__content copy">
+      <h1 class="title font-headings text-align-center">All your files in one secure location, accessible anywhere.</h1>
+      <p class="hero__content copy text-align-center">
         Fylo stores your most important files in one secure location. Access them wherever you need,
         Share and collaborate with friends family and co-workers.
       </p>
@@ -40,51 +36,55 @@
       </div>
     </div>
     <figure class="ilustration">
-      <img src="images/illustration-1.svg" alt="">
+      <img src="images/illustration-1.svg" class="img-fluid" alt="">
     </figure>
   </header>
   <section class="description">
     <div class="description__container">
-      <h2 class="subtitle">Stay productive, wherever you are</h2>
-      <p class="description__content copy">
-        <span class="first-copy">
-          Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage need.
-        </span>
-        <span class="second-copy">
-          Securly share files an folders with your friend, family and colleagues  for live collaboration. No emails attachements required!
-        </span>
-        <a href="#" class="description__how-works">See how Fylo works</a>
-      </p>
-      <div class="card">
-        <p class="card-testimonial">
-          Fylo has improve our team productivity by an order of magnitude.
-          Since making the switch our team has becomea well-oiled collaboration machine.
+      <div class="description__container-copy">
+        <h2 class="subtitle">Stay productive, wherever you are</h2>
+        <p class="description__copy copy">
+          <span class="first-copy">
+            Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage need.
+          </span>
+          <span class="second-copy">
+            Securly share files an folders with your friend, family and colleagues  for live collaboration. No emails attachements required!
+          </span>
+          <a href="#" class="description__how-works">See how Fylo works</a>
         </p>
-        <div class="card-user">
-          <img src="./images/avatar-testimonial.jpg" alt="" class="card-avatar">
-          <p class="card-user-details">
-            <span class="username">Kyle Burton</span>
-            <span class="position">Founder & CEO, Huddle</span>
+        <div class="card">
+          <p class="card-testimonial">
+            Fylo has improve our team productivity by an order of magnitude.
+            Since making the switch our team has becomea well-oiled collaboration machine.
           </p>
+          <div class="card-user">
+            <img src="./images/avatar-testimonial.jpg" alt="" class="card-avatar img-fluid">
+            <p class="card-user-details">
+              <span class="username">Kyle Burton</span>
+              <span class="position">Founder & CEO, Huddle</span>
+            </p>
+          </div>
         </div>
       </div>
-    <figure class="ilustration">
-      <img src="images/illustration-2.svg" alt="">
-    </figure>
+      <figure class="ilustration">
+        <img src="images/illustration-2.svg" class="img-fluid" alt="">
+      </figure>
     </div>
   </section>
   <section class="subscription">
-    <div class="subscription__container">
-      <h3 class="subtitle">Get early acces today</h3>
-      <p class="subscription__content copy">
-        It only takes a minute sign up and our free starter tier is extremelly generous.
-        If you have any questions, our support team would be happy to help you.
-      </p>
-    </div>
-    <div class="subscription-signup subscription-form">
-        <input type="email" name="email" id="" placeholder="example@example.com">
-        <input type="button" value="Get Started For Free">
-    </div>
+    <article class="subscription__container">
+      <div class="subscription__content">
+        <h3 class="subtitle">Get early acces today</h3>
+        <p class="subscription__copy copy">
+          It only takes a minute sign up and our free starter tier is extremelly generous.
+          If you have any questions, our support team would be happy to help you.
+        </p>
+      </div>
+      <div class="subscription-signup subscription-form">
+          <input type="email" name="email" id="" placeholder="example@example.com">
+          <input type="button" value="Get Started For Free">
+      </div>
+    </article>
   </section>
   <footer>
     <div class="contac">

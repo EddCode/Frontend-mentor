@@ -1,13 +1,162 @@
-root{
+:root{
   /* <--- colors --->*/
   /* <-- primary -->*/
+  --dark-blue: hsl(243, 87%, 12%);
+  --desaturate-blue: hsl(238, 22%, 44%);
   /* <-- acent -->*/
+  --bright-blue: hsl(224, 93%, 58%);
+  --moderate-cyan: hsl(170, 45%, 43%);
   /* <-- Neutral -->*/
+  --light-grayish: hsl(240, 75%, 98%);
+  --light-gray: hsl(0, 0%, 75%);
 
+  /* <---- Fonts ---->*/
+  --font-headings: 'Raleway';
+  --font-body: 'Open Sans';
+
+
+  --max-content-width: 90%;
 }
 
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+nav, header {
+  width: var(--max-content-width);
+  margin: auto;
+}
+
+input[type="email"], input[type="button"]{
+  padding: 1em 1.5em;
+  border-radius: 7px;
+  width: 100%;
+}
+
+/*
+ * ===========
+ *  Utilities
+ * ===========
+ * */
+.img-fluid{
+  width: 100%;
+  height: auto;
+}
+
+.font-headings, .font-call-to-actions, .font-navigation{
+  font-family: var(--font-headings), sans-serif;
+  font-weight: 700;
+}
+
+.text-align-center{
+  text-align: center;
+}
+
+.title{
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  color: var(--dark-blue);
+}
+
+.copy{
+  color: var(--desaturate-blue);
+  font-family: var(--font-body), sans-serif;
+  font-weight: 400;
+  font-size: .8rem;
+}
+
+.subscription-form{
+  width: 100%;
+}
+
+.subscription-form input[type="email"]{
+  border: 1px solid var(--desaturate-blue);
+}
+
+.subscription-form input[type="button"]{
+  margin-top: 1em;
+  box-shadow: 1px 2px 13px 0px rgba(0,0,0,.7);
+  background-color: var(--bright-blue);
+  color: #FFF;
+  font-weight: 700;
+  border: none;
+  outline: none;
+}
+
+/* ================
+ * Menu navigation
+ * ================
+ * */
+.menu{
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-logo{
+  width: 80px;
+}
+
+.menu-items{
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: 100;
+}
+
+.menu-items li:nth-child(2){
+  margin: 0 20px
+}
+
+/* =========
+ * Hero
+ * =========
+ * */
+.hero{
+  display: flex;
+  flex-flow: wrap column;
+
+  margin-bottom: 3em;
+}
+
+.hero__container{
+  order: 1;
+}
+
+.hero__content{
+  margin: 1.3em auto;
+  width: 80%;
+  line-height: 1.3rem;
+}
+
+.hero .ilustration{
+  margin: 3em 0 2em 0;
+}
+
+/**
+ * ==============
+ * Description
+ * ==============
+ * */
+.description{
+  margin-top: 3em;
+  position: relative;
+  background-color: #f2f2fe;
+  background-image: url(./images/bg-curve-mobile.svg);
+  background-repeat: no-repeat;
+}
+
+.description__container{
+  max-width: var(--max-content-width);
+  margin: auto;
+
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.description__container-copy{
+  order: 1;
+}
