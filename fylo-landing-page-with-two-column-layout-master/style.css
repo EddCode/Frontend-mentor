@@ -54,12 +54,18 @@ input[type="email"], input[type="button"]{
   text-align: center;
 }
 
-.title{
+.title, .subtitle{
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 2.4rem;
   color: var(--dark-blue);
 }
+
+.subtitle{
+  font-size: 1rem;
+  text-align: center;
+}
+
 
 .copy{
   color: var(--desaturate-blue);
@@ -118,8 +124,6 @@ input[type="email"], input[type="button"]{
 .hero{
   display: flex;
   flex-flow: wrap column;
-
-  margin-bottom: 3em;
 }
 
 .hero__container{
@@ -142,11 +146,22 @@ input[type="email"], input[type="button"]{
  * ==============
  * */
 .description{
-  margin-top: 3em;
+  margin-top: 10em;
   position: relative;
-  background-color: #f2f2fe;
+  background-color: #f8f8fd;
+}
+
+.description::before{
+  content: '';
   background-image: url(./images/bg-curve-mobile.svg);
   background-repeat: no-repeat;
+
+  display: block;
+  height: 100px;
+  width: 100%;
+
+  position: relative;
+  top: -50px
 }
 
 .description__container{
@@ -159,4 +174,171 @@ input[type="email"], input[type="button"]{
 
 .description__container-copy{
   order: 1;
+}
+
+.description__container-copy .subtitle{
+  margin: 3em auto 1em auto;
+}
+
+.description__copy{
+  line-height: 1.6rem;
+  font-size: 1rem;
+}
+
+.first-copy, .second-copy{
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+.description__how-works{
+  display: inline-flex;
+  color: #407C73;
+  text-decoration: none;
+
+  padding-bottom: .5rem;
+  border-bottom: 1px solid #407C73;
+  margin: 2em auto;
+}
+
+.description__how-works::after{
+  content: url(./images/icon-arrow.svg);
+  margin-left: .5rem;
+  align-self: center;
+}
+
+.card{
+  background-color: #FFF;
+  border-radius: 7px;
+  box-shadow: 1px 1px 10px rgba(0,0,0,.5);
+
+  width: 90%;
+  padding: 1em;
+  margin: 0 auto 7em auto;
+}
+
+.card-testimonial{
+  line-height: 1.3rem;
+  margin-bottom: 1.5em;
+}
+
+.card-testimonial::before{
+  content: url(./images/icon-quotes.svg);
+  display: block;
+}
+
+.card-user{
+  display: flex;
+  align-items: center;
+}
+
+.card-user .card-avatar{
+  width: 20%;
+  clip-path: circle(50% at 50% 50%);
+}
+
+.card-user-details{
+  margin-left: .8rem;
+  font-size: .7rem;
+
+  display: flex;
+  flex-flow: column wrap;
+}
+.username{
+  display: inline-block;
+  margin-bottom: .5em;
+}
+
+.position{
+  font-size: .5em;
+}
+
+/**
+ * ===================
+ *  Subscription
+ * ===================
+ * */
+.subscription{
+  background-color: var(--desaturate-blue);
+  padding: 3em 0;
+}
+
+.subscription__container{
+  width: var(--max-content-width);
+  margin: auto;
+}
+
+.subscription__content{
+  margin-bottom: 2em;
+}
+
+.subscription__content .subtitle, .subscription__content .copy{
+  color: #FFF;
+  line-height: 1.3rem;
+}
+
+/**
+ * =======
+ *  footer
+ * =======
+ * */
+footer{
+  background-color: var(--dark-blue);
+  padding: 3em 0 2em 0;
+  color: #FFF;
+}
+
+.footer-content{
+  max-width: var(--max-content-width);
+  margin: auto;
+}
+
+footer .contact{
+  display: flex;
+  flex-flow: column wrap;
+  margin-bottom: 1em;
+}
+
+footer .logo-container{
+  margin-bottom: 1.5em;
+}
+
+footer .contact .phone{
+  margin: 1em 0;
+}
+
+.icon-phone::after{
+  content: url(images/icon-phone.svg);
+}
+
+.icon-mail::after{
+  content: url(images/icon-email.svg);
+}
+
+.contact-2, .contact-3{
+  margin: 2em 0;
+}
+
+.contact-2 li, .contact-3 li{
+  margin: .7em 0;
+}
+
+.social-media{
+  display: flex;
+  justify-content: center;
+}
+
+.social-media li {
+  border: 1px solid white;
+  border-radius: 100%;
+
+  margin: 0 .7em;
+  padding: 4px;
+  height: 20px;
+  width: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  font-size: 10px;
 }

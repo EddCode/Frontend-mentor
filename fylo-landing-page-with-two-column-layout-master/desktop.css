@@ -1,0 +1,98 @@
+
+.subscription-form{
+  display: flex;
+  flex-direction: row;
+}
+.subscription-form input[type="button"]{
+  margin-top: 0;
+  margin-left: .5rem;
+}
+
+/* ================
+ * Hero
+ * ================
+ * */
+.hero{
+  justify-content: space-between;
+  flex-flow: nowrap row;
+}
+
+.hero__container{
+  margin: auto;
+}
+
+.hero .ilustration{
+  order: 1;
+}
+
+.hero__container .title, .hero__container .hero__content{
+  text-align: start;
+}
+
+.hero__content{
+  margin: 1.3em 0;
+}
+
+/**
+ * ==============
+ * Description
+ * ==============
+ * */
+
+.description::before{
+  background-image: url(./images/bg-curve-desktop.svg);
+  top: -100px;
+}
+
+.description__container{
+  justify-content: space-between;
+  flex-flow: nowrap row;
+}
+
+.description__container-copy{
+  width: 60%;
+}
+
+.description .ilustration{
+  order: 1;
+}
+
+.description__container-copy >  *{
+  text-align: start;
+}
+
+.card{
+ width: 70%;
+ margin: 0 0 7em 0;
+}
+
+/**
+ * ==============
+ *  Subscription
+ * ==============
+ * */
+.subscription__container{
+  display: flex;
+  justify-content: space-between;
+  flex-flow: nowrap row;
+}
+
+.subscription__content{
+  width: 30%;
+}
+
+.subscription__content > *{
+  text-align: start;
+}
+
+.subscription-signup{
+  display: block;
+  width: 40%;
+}
+
+
+.subscription-signup input[type="button"]{
+  margin-left: 0;
+  margin-top: .8rem;
+  width: 40%;
+}

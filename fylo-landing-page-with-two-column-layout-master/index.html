@@ -4,11 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap" rel="stylesheet">
+
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="desktop.css" media="screen and (min-width:1024px)">
 
   <title>Frontend Mentor | Fylo landing page with two column layout</title>
 </head>
@@ -50,10 +53,12 @@
           <span class="second-copy">
             Securly share files an folders with your friend, family and colleagues  for live collaboration. No emails attachements required!
           </span>
-          <a href="#" class="description__how-works">See how Fylo works</a>
+          <div class="text-align-center">
+            <a href="#" class="description__how-works">See how Fylo works</a>
+          </div>
         </p>
         <div class="card">
-          <p class="card-testimonial">
+          <p class="card-testimonial copy">
             Fylo has improve our team productivity by an order of magnitude.
             Since making the switch our team has becomea well-oiled collaboration machine.
           </p>
@@ -75,7 +80,7 @@
     <article class="subscription__container">
       <div class="subscription__content">
         <h3 class="subtitle">Get early acces today</h3>
-        <p class="subscription__copy copy">
+        <p class="subscription__copy copy text-align-center">
           It only takes a minute sign up and our free starter tier is extremelly generous.
           If you have any questions, our support team would be happy to help you.
         </p>
@@ -87,35 +92,43 @@
     </article>
   </section>
   <footer>
-    <div class="contac">
+    <div class="footer-content">
       <figure class="logo-container">
-        <img src="images/logo.svg" alt="" class="logo">
+        <img src="images/logo-ligth.svg" alt="" class="logo">
       </figure>
-      <span class="phone">
-        <i class="icon-phone"></i>
-        <span>Phone: 3333333</span>
-      </span>
-      <span class="mail">
-        <i class="icon-mail"></i>
-        <span>example@fylo.com</span>
-      </span>
+      <div class="contact">
+          <span class="phone">
+          <i class="icon-phone"></i>
+          <span>Phone: 3333333</span>
+        </span>
+        <span class="mail">
+          <i class="icon-mail"></i>
+          <span>email: example@fylo.com</span>
+        </span>
+      </div>
+      <ul class="contact-2">
+        <li>About us</li>
+        <li>Jobs</li>
+        <li>Press</li>
+        <li>Blog</li>
+      </ul>
+      <ul class="contact-3">
+        <li>Contact us</li>
+        <li>Terms</li>
+        <li>Privacy</li>
+      </ul>
+      <ul class="social-media">
+        <li>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </li>
+        <li>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </li>
+        <li>
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </li>
+      </ul>
     </div>
-    <ul class="contact-2">
-      <li>About us</li>
-      <li>Jobs</li>
-      <li>Press</li>
-      <li>Blog</li>
-    </ul>
-    <ul class="contact-3">
-      <li>Contact us</li>
-      <li>Terms</li>
-      <li>Privacy</li>
-    </ul>
-    <ul class="social-media">
-      <li>facebook</li>
-      <li>instagram</li>
-      <li>twitter</li>
-    </ul>
   </footer>
 </body>
 </html>
